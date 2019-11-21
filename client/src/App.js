@@ -1,10 +1,27 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Main from "./pages/Main";
+import Saved from "./pages/Saved";
+import Error from "./pages/Error";
+import Nav from "./components/Nav";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route exact path="/saved" component={Saved} />
+          <Route component={Error} />
+        </Switch>
+      </div>
+    </Router>
+
+  /*
+  <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,8 +36,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </div>*/
   );
 }
-
 export default App;
