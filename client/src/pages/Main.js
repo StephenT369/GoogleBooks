@@ -6,7 +6,8 @@ import Footer from "../components/Footer";
 import API from "../api";
 import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
-
+import Jumbotron from "../components/Jumbotron";
+import GoogleLogo from "../assets/images/google-book.png"
 class Main extends Component {
   state = {
     books: [],
@@ -60,12 +61,12 @@ class Main extends Component {
       <Container>
         <Row>
           <Col size="md-12">
-        
+        <Jumbotron>
               <h1 className="text-center">
-                <strong>Google Books Search</strong>
+                <img src={GoogleLogo}></img>
               </h1>
               <h2 className="text-center">Search for and Save Books of Interest.</h2>
-
+              </Jumbotron>
           </Col>
           <Col size="md-12">
             <Card title="Book Search" icon="far fa-book">

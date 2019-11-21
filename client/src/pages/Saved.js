@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import API from "../api";
 import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
+import Jumbotron from "../components/Jumbotron";
 
 class Saved extends Component {
   state = {
@@ -34,12 +35,13 @@ class Saved extends Component {
       <Container>
         <Row>
           <Col size="md-12">
+          <Jumbotron>
             <h1 className="text-center">
               <strong>Google Books Search</strong>
             </h1>
             <h2 className="text-center">
               Search for and Save a Book!
-            </h2>
+            </h2></Jumbotron>
           </Col>
         </Row>
         <Row>
